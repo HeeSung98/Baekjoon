@@ -19,8 +19,7 @@ for i in range(n):
 result = 0
 while Q:
     cx, cy = Q.popleft()
-    if visited[cx][cy] == 0:
-        visited[cx][cy] = 1
+    visited[cx][cy] = 1
     for dx, dy in direction:
         nx, ny = cx + dx, cy + dy
         if 0 <= nx < n and 0 <= ny < m and board[nx][ny] != 'X':
