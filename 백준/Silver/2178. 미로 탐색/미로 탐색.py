@@ -13,7 +13,7 @@ for i in range(N):
     board.append(list(map(int, input().strip())))
 
 Q = deque([])
-Q.append([0, 0])
+Q.append((0, 0))
 
 while Q:
     x, y = Q.popleft()
@@ -22,6 +22,6 @@ while Q:
         if 0 <= nx < N and 0 <= ny < M and board[nx][ny]:
             if not visited[nx][ny]:
                 visited[nx][ny] += visited[x][y] + 1
-                Q.append([nx, ny])
+                Q.append((nx, ny))
 
 print(visited[N - 1][M - 1])
